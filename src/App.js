@@ -7,6 +7,7 @@ import DashBoard from './pages/DashBoard';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
 
@@ -25,7 +26,11 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn}></Login>}></Route>
         <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn}></SignUp>}></Route>
-        <Route path="/dashboard" element={<DashBoard></DashBoard>}></Route>
+        <Route path="/dashboard" element={
+          <PrivateRoute>
+            <DashBoard></DashBoard>
+          </PrivateRoute>
+        }></Route>
 
       </Routes>
 
