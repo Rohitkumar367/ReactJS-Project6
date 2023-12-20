@@ -1,0 +1,64 @@
+.App{
+    width: 100vw;
+    height: 100vh;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    max-width: 1140px;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+
+.navbar .navchild1{
+    display: flex;
+    gap: 5px;
+}
+
+.list{
+    list-style-type: none;
+}
+
+.forHome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    font-size: xx-large;
+    height: 100%;
+    background-color: rgb(8, 11, 71);
+}
+
+.dashboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    font-size: xx-large;
+    height: 100%;
+    background-color: rgb(8, 11, 71);
+}
+
+.toploginpage{
+    display: flex;
+    width: 500px;
+    max-width: 1140px;
+    border: 2px solid green;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 12px;
+}
+
+
+
