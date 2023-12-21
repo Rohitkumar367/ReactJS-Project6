@@ -2,7 +2,7 @@ import React from 'react'
 
 const DashBoard = () => {
   return (
-    <div className='dastboard'>
+    <div className='dashboard'>
       Welcome To StudyNotion
     </div>
   )

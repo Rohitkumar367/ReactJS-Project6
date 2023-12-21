@@ -23,11 +23,11 @@ function App() {
 
       <Routes>
 
-        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/" element={<Home isLoggedIn={isLoggedIn}></Home>}></Route>
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn}></Login>}></Route>
         <Route path="/signup" element={<SignUp setIsLoggedIn={setIsLoggedIn}></SignUp>}></Route>
         <Route path="/dashboard" element={
-          <PrivateRoute>
+          <PrivateRoute isLoggedIn={isLoggedIn}>
             <DashBoard></DashBoard>
           </PrivateRoute>
         }></Route>

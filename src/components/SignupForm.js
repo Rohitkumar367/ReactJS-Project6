@@ -16,6 +16,7 @@ const SignupForm = ({setIsLoggedIn}) => {
   })
 
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [accountType, setAccountType] = useState("student");
 
   function changeHandler(event){
@@ -35,12 +36,18 @@ const SignupForm = ({setIsLoggedIn}) => {
     setIsLoggedIn(true);
 
     toast.success("Account Created");
+
     const accountData = {
       ...formData
     };
+
+    const finalData = {
+      ...accountData,
+      accountType
+    }
     
-    console.log("printing account data");
-    console.log(accountData);
+    console.log("printing final account data");
+    console.log(finalData);
 
     navigate("/dashboard");
 
@@ -118,14 +125,14 @@ const SignupForm = ({setIsLoggedIn}) => {
             <p>Confirm Password <sup>*</sup></p>
             <input 
               required
-              type={showPassword ? ("text") : ("password")} 
+              type={showConfirmPassword ? ("text") : ("password")} 
               name='confirmPassword'
               onChange={changeHandler}
               placeholder='Confirm password'
               value={formData.confirmPassword}
             />
-            <span onClick={()=> setShowPassword((prev) => !prev)}>
-              {showPassword ? ("hide password") : ("show password")}
+            <span onClick={()=> setShowConfirmPassword((prev) => !prev)}>
+              {showConfirmPassword ? ("hide password") : ("show password")}
             </span>
           </label>
         </div>
