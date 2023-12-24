@@ -38,16 +38,13 @@ const SignupForm = ({setIsLoggedIn}) => {
     toast.success("Account Created");
 
     const accountData = {
-      ...formData
+      ...formData,
+      accountType
     };
 
-    const finalData = {
-      ...accountData,
-      accountType
-    }
     
     console.log("printing final account data");
-    console.log(finalData);
+    console.log(accountData);
 
     navigate("/dashboard");
 
